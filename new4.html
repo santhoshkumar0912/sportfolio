@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santhosh Kumar | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset and Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            background: #0a0a0a;
+            line-height: 1.5;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1, h2, h3, h4 {
+            margin-bottom: 20px;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(90deg, #430089, #82ffa1);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 0 0 10px #fff;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a:hover {
+            color: #ff79c6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: radial-gradient(circle at top left, #3c096c, #240046);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            color: #e0aaff;
+            text-shadow: 0 0 20px #e0aaff, 0 0 30px #e0aaff;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            color: #c77dff;
+        }
+
+        .hero a {
+            background: #9d4edd;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 0 20px #9d4edd;
+            text-transform: uppercase;
+        }
+
+        .hero a:hover {
+            background: #c77dff;
+            box-shadow: 0 0 30px #c77dff;
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(90deg, #240046, #3c096c);
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            color: #ff79c6;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            color: #e0aaff;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: linear-gradient(135deg, #ff79c6, #430089);
+            padding: 60px 20px;
+        }
+
+        .skills h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+
+        .skills .skill-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .skill {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 0 0 10px #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 60px 20px;
+            text-align: center;
+            background: radial-gradient(circle, #3c096c, #240046);
+        }
+
+        .projects h2 {
+            color: #e0aaff;
+            margin-bottom: 40px;
+        }
+
+        .projects .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: #240046;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .project-card h3 {
+            color: #ff79c6;
+            margin-bottom: 10px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, #ff79c6, #82ffa1);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .contact p {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            color: #240046;
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            background: #240046;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact button:hover {
+            background: #430089;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            background: #240046;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="santhosh.jpg"
+    width="300px"height="300px">
+        <h1>Santhosh Kumar</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Santhosh Kumar</h2>
+        <p>A Passionate Learner and Innovator</p>
+        <a href="#about">Discover More</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hello! I am Santhosh Kumar, from Chennai. I am an college student, studying 2nd year B.Tech on CSBS department on Veltech Multitech Engineering college.
+        and I'm a passionate student constantly exploring the wonders of technology. I aim to create innovative projects that make an impact on the world.
+            
+
+
+            I am a very intrested person to learn about new technologies and gain knowledge on researching the evolving sources helpfull to the world.
+         I have experienced on c programming language and python programming. Always I keep me engaged on learning things on which i am intrested.
+            
+
+
+            Reading books is one of my hobby for relaxing and to learn the diffrent perspectives of author on life. some books gave me some solutions for questions on 
+        life and implementing some rather ideas gave me hope to handle worst situations on my life. 
+               </p>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <div class="skill-container">
+            <div class="skill">HTML</div>
+            <div class="skill">C language</div>
+            <div class="skill">Java - OOP</div>
+            <div class="skill">Python</div>
+            <div class="skill">C++</div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects and works</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>A fully responsive portfolio website to showcase about me and my skills.</p>
+            </div>
+            <div class="project-card">
+                <h3>App Developments</h3>
+                <p>I have started learning the app development.</p>
+            </div>
+            <div class="project-card">
+                <h3>Web development</h3>
+                <p>I am learning a Web development course and after completion my projects will be uploaded.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <section id="contact" class
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch with me, here are my contact details:</p>
+        <div class="contact-info">
+            <p><strong>Email:</strong> santhoshsathish920@gmail.com</p>
+            <p><strong>Phone:</strong> +91-6374424674</p>
+            <p><strong>Location:</strong> Chennai, Tamil Nadu, India</p>
+        </div>
+        <form>
+            <h3>Send Me a Message</h3>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
